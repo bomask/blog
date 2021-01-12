@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-05 18:39:46
+ * @LastEditTime: 2021-01-11 17:15:15
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \blog\src\components\common\Footer.vue
+-->
 <template>
   <div>
     <v-footer
@@ -15,7 +23,7 @@
         <!--        <v-divider style="background-color: white"></v-divider>-->
 
         <v-card-text class="white--text">
-          <strong>备案号:<a href="http://beian.miit.gov.cn"
+          <strong>备案号:<a href="https://beian.miit.gov.cn"
                          style="color: rgb(241,147,114);text-decoration: none;">陕ICP备2020017978号</a></strong>
         </v-card-text>
       </v-card>

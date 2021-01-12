@@ -10,8 +10,8 @@ module.exports = {
       new CompressionPlugin({
         algorithm: 'gzip',
         test: /\.js$|\.html$|\.css/, // 匹配文件名
-        threshold: 1024*5, // 文件压缩阈值，对超过10 k的进行压缩
-        deleteOriginalAssets: true, // 是否删除源文件
+        threshold: 1024 * 5, // 文件压缩阈值，对超过10 k的进行压缩
+        // deleteOriginalAssets: true, // 是否删除源文件
         minRatio: 0.8
       })
     ]
