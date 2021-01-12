@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-05 18:39:46
- * @LastEditTime: 2021-01-11 22:26:21
+ * @LastEditTime: 2021-01-12 10:59:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \blog\src\components\common\BlogDetail.vue
@@ -15,7 +15,12 @@
       <small>{{Blog.insertTime}} {{Blog.author}}</small>
     </div>
     <div class="blogContent">
-      <MarkdownPreview v-model="Blog.blogContent" :bordered="false" style="height:100%" :isPreview="true"></MarkdownPreview>
+      <MarkdownPreview
+        v-model="Blog.blogContent"
+        :bordered="false"
+        style="height:100%"
+        :isPreview="true"
+      ></MarkdownPreview>
     </div>
   </div>
 </template>

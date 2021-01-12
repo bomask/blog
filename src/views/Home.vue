@@ -73,7 +73,7 @@ export default {
   data() {
     return {
       currentPage: 1,
-      totalPage:1,
+      totalPage: 1,
       num: 6,
       // 每页显示多少条
       drawer: false,
@@ -90,7 +90,7 @@ export default {
       get_blog_list(currentPage, num, currentSort).then(res => {
         this.pageList = res.data.data;
         this.totalPage = res.data.totalPage;
-        console.log(res.data.totalPage)
+        console.log(res.data.totalPage);
       });
     },
     getLabel() {
@@ -109,7 +109,6 @@ export default {
         this.currentPage = 1;
       }
       this.getBlogList(this.currentPage, this.num, this.currentSort);
-
     },
     jumpToPage() {
       /**
