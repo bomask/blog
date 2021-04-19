@@ -26,8 +26,15 @@
     </v-navigation-drawer>
 
     <div class="main">
+
       <div class="logo">
-        <a aria-current="page" class href="/">Hello Orange</a>
+        <a aria-current="page" class href="/">
+         <typical
+          class="typicalWrapper"
+          :steps="['Hello', 1000, 'Hello Orange! 👋', 4000]"
+          :loop="Infinity"
+        ></typical></a>
+
       </div>
 
       <div class="introduce">
@@ -66,10 +73,11 @@ import Abstract from "../components/common/Abstract";
 import CategoriesList from "../components/common/CategoriesList";
 import BlogDetail from "../components/common/BlogDetail";
 import { get_blog_list, get_label } from "../network/getBlogInfo";
+import typical from "vue-typical";
 
 export default {
   name: "home",
-  components: { Abstract, CategoriesList, BlogDetail },
+  components: { Abstract, CategoriesList, BlogDetail,typical},
   data() {
     return {
       currentPage: 1,
@@ -211,5 +219,14 @@ export default {
 
 [v-cloak] {
   display: none;
+}
+
+.typicalWrapper::after {
+  content: "|";
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 </style>
